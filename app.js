@@ -22,3 +22,6 @@ app.listen(PORT, () => {
 });
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.json());
+const apiRoutes = require('./routes/api');
+app.use('/api', apiRoutes);
